@@ -11,12 +11,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel=stylesheet href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <title>Récapitulatif des produits</title>
 
 </head>
 
 <body>
+<div class="maincontent">
+
+    <nav>
+        <ul style="list-style: none;">
+            <li><a href="./index.php">Ajouter Produit</a></li>
+            <li><a class="active" href="./recap.php">Recap</a></li>
+        </ul>
+    </nav>
+
+</div>
 
 <?php
 
@@ -26,7 +39,7 @@
     // Dans ces 2 cas nous afficherons à l'utilisateur un message le prévenant qu'aucun produit n'existe en session.
 
     if (!isset($_SESSION['products']) || empty($_SESSION['products'])){
-        echo "<p>Aucun produit en session ...</p>";
+        echo "<strong><p>Aucun produit en session ...</p></strong>";
 
     } else {
 
