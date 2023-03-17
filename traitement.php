@@ -46,9 +46,15 @@
 
             // $_SESSION["products"] doit être un tableau lui aussi afin d'y stocker de nouveaux produits.
         }
+    
+        
+ 
 
 
     }
+
+
+    
 
     header("Location:index.php"); // Redirection vers le formulaire
     // Pas de else à la condition puisque nous souhaitons le retour aprés le traitement que le formulaire ai été soumis ou non.
@@ -62,9 +68,18 @@
 
 ?>
 
+<!--
+     
+superglobales : Des variables prédéfinies en PHP disponibles quelque soit le contexte du script
+    
+session : tableau associatif des valeurs stockées transmises de page en page pendant la durée de visite de l'utilisateur sur le site. Il faut au préalable activer les sessions en appelant la fonction : "session_start()"
+    
+requete HTTP : via le protocole HTML la façon dont l'utilisateur formule ses demandes et la façon dont le serveur y répond est contrôlé. Ce protocole connaît différentes méthode de requêtes :
 
-superglobales :
+_ GET
+_ POST
+_ HEAD
+_ OPTIONS
+_ TRACE
 
-session 
-
-requete HTTP
+ -->

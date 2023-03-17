@@ -1,6 +1,5 @@
 <?php
 // recap.php permet d'afficher de manière organisée et exhaustive la liste des produits présents en session et présente le total de l'ensemble de ceux-ci
-
     session_start(); // A la différence d'index.php il sera nécessaire de parcourir le tableau de session d'où l'appel de la session_start() au début de fichier pour récupérer la session correspondante à l'utilisateur.
 ?>
 
@@ -44,6 +43,8 @@
 
     } else {
 
+        
+
         echo "<table>",
                 "<thead>",
                     "<tr>",
@@ -71,26 +72,31 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                "</tr>";
-                        
+                "</tr>";    
                         
                         
                         
             
             $totalGeneral += $product['total'];
+
         
-        }
-     
             
+            
+        }
+        
+        echo "<p>".$product['qtt']." <-- ça c'est la quantité du dernier produits donc si c'est là ..."."</p>";
         
         echo "<tr>",
                 "<td colspan=4>Total général : </td>",
                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
-            "</tr>",   
+            "</tr>",
         "</tbody>",
         "</table>";
+
+        
         
     }
+
 
 ?>
 </div>
