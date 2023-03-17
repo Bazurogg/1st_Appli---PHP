@@ -80,6 +80,7 @@
                         
             
             $totalGeneral += $product['total'];
+            
             $allQtt += $product['qtt'];
 
         
