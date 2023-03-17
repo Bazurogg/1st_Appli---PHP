@@ -7,8 +7,7 @@
     <link rel=stylesheet href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <title>Ajout produit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">    <title>Ajout produit</title>
 </head>
 <body>
 
@@ -20,8 +19,12 @@
             <li><a href="./recap.php">Recap</a></li>
         </ul>
     </nav> 
+            
+        <div class="titre01">
 
-        <h1>Ajouter un produit</h1>
+            <h1>. Ajouter un produit .</h1>
+
+        </div>
 
         <form id=addform action="traitement.php" method="post">
             <!-- "action" indique la cible du formulaire lorsque le utilisateur soumet le formulaire -->
