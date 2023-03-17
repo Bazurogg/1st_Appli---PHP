@@ -58,8 +58,10 @@
                 "<tbody>";      
                 
         $totalGeneral = 0;
+        $allQtt = 0;
 
         foreach($_SESSION['products'] as $index => $product){
+
         
 
             // $index valeur de l'index du tableau $_SESSION['products'] chaque produit sera numéroter par cette valeur dans le tableau HTML
@@ -78,13 +80,14 @@
                         
             
             $totalGeneral += $product['total'];
+            $allQtt += $product['qtt'];
 
         
             
             
         }
         
-        echo "<p>".$product['qtt']." <-- ça c'est la quantité du dernier produits donc si c'est là ..."."</p>";
+        echo "<p>".$allQtt." <-- ça c'est la quantité total de produits"."</p>";
         
         echo "<tr>",
                 "<td colspan=4>Total général : </td>",
