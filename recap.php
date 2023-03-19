@@ -33,8 +33,8 @@
     
 <?php
 
-    // Rajout d'une condition qui vérifie :
-    // soit la clé "products" du tableau de session $_SESSION n'existe pas : "!isset()"
+    // Rajout d'une condition qui vérifie si :
+    // soit la clé "products" du tableau de session $_SESSION n'existe pas "false". Le "!" ici inverse la condition de vérification : "isset()". 
     // soit cette clé existe mais ne contient aucune donnée : empty()
     // Dans ces 2 cas nous afficherons à l'utilisateur un message le prévenant qu'aucun produit n'existe en session.
 
@@ -88,7 +88,7 @@
             
         }
         
-        echo "<p>".$allQtt." <-- ça c'est la quantité total de produits"."</p>";
+        echo "<p>".$allQtt." <-- Voilà la quantité total de produits en sessio"."</p>";
         
         echo "<tr>",
                 "<td colspan=4>Total général : </td>",

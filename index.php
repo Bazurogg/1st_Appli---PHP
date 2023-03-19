@@ -10,17 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">    <title>Ajout produit</title>
+    <?php
+    session_start()
+    ?>
 </head>
+
 <body>
 
     <div class="maincontent">
-
-    <nav>
-        <ul style="list-style: none;">
-            <li><a class="active" href="./index.php">Ajouter Produit</a></li>
-            <li><a href="./recap.php">Recap</a></li>
-        </ul>
-    </nav> 
+        
+        <nav>
+            <ul style="list-style: none;">
+                <li><a class="active" href="./index.php">Ajouter Produit</a></li>
+                <li><a href="./recap.php">Recap</a></li>
+            </ul>
+        </nav> 
             
         <div class="titre01">
 
@@ -55,6 +59,27 @@
             </p>
 
         </form>
+
+        <?php
+
+        $allQtt = 0;
+
+        foreach($_SESSION['products'] as $index => $product){
+
+            $allQtt += $product['qtt'];
+
+        }
+
+        echo "<p>".$allQtt." <-- Voilà la quantité total de produits en session"."</p>";
+
+        
+
+        if (isset($_SESSION['alert'])){
+            echo "<p>".$_SESSION['alert']."</p>";
+            unset($_SESSION['alert']);
+        }
+
+        ?>
 
     </div>
 

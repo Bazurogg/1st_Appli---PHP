@@ -8,13 +8,14 @@
 
     session_start();
 
-    if(isset($_POST['submit'])){
+    $alert = "";
 
+    if(isset($_POST['submit'])){
+        
         // Vérification de l'intégrité des valeurs transmises dans le tableau $_POST en fonction de celles attendue réellement.
 
-        // "filter_input()" fonction php effectue une validation ou nettoyage de chaque donnée transmise par le formulaire  via divers filtres
-
-
+        // "filter_input()" fonction php qui effectue une validation ou nettoyage de chaque données transmises par le formulaire via divers filtres.
+        
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_STRING);
         // supprime une chaîne de caractères de toute présence de caractères spéciaux et de toute balise HTML (PAS D'INJECTION DE CODE HTML POSSIBLE)
 
@@ -40,21 +41,27 @@
 
             $_SESSION['products'][] = $product; // on sollicite le tableau de session $_SESSION fourni par PHP
 
-            // on indique la clé "products" de ce tableau. Si cette clé n'existais pas auparavant (ex: ajouts par l'utilisateur de son tout 1er produit) elle est créée au sein de $_SESSSION par PHP.
+            // on indique la clé "products" de ce tableau. Si cette clé n'existais pas auparavant (ex: ajouts par l'utilisateur de son tout 1er produit) elle est créée au sein de $_SESSION par PHP.
 
             // "[]" raccourci pour indiquer à cet emplacement que nous ajoutons une nouvelle entrée au futur tableau "products" associé  à cette clé.
 
             // $_SESSION["products"] doit être un tableau lui aussi afin d'y stocker de nouveaux produits.
+
+            $alert = "Bravo ! Vous avez bien ajouté un nouveau produit.";
+
+        } else {
+
+            $alert = "Erreur ! Impossible d'ajouter ce produit.";
+
         }
-    
+            
+    }        
         
- 
-
-
-    }
-
-
     
+
+
+    $_SESSION['alert'] = $alert;
+
 
     header("Location:index.php"); // Redirection vers le formulaire
     // Pas de else à la condition puisque nous souhaitons le retour aprés le traitement que le formulaire ai été soumis ou non.
@@ -74,7 +81,7 @@ superglobales : Des variables prédéfinies en PHP disponibles quelque soit le c
     
 session : tableau associatif des valeurs stockées transmises de page en page pendant la durée de visite de l'utilisateur sur le site. Il faut au préalable activer les sessions en appelant la fonction : "session_start()"
     
-requete HTTP : via le protocole HTML la façon dont l'utilisateur formule ses demandes et la façon dont le serveur y répond est contrôlé. Ce protocole connaît différentes méthode de requêtes :
+requete HTTP : via le protocole HTML qui contrôle la façon dont l'utilisateur formule ses demandes et la façon dont le serveur y répond. Ce protocole connaît différentes méthodes de requêtes :
 
 _ GET
 _ POST
@@ -82,4 +89,4 @@ _ HEAD
 _ OPTIONS
 _ TRACE
 
- -->
+-->
