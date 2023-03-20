@@ -57,12 +57,24 @@
                     else $_SESSION['alert'] = "Erreur ! remplissez entièrement le formulaire.";
             
                 }
+                break;
                
 
-                break;
-                        
-        }       
+
+            case "delete":
+
+                if (isset($_SESSION['products'])){
+
+                    session_unset();
                     
+                    $_SESSION['alert'] = "Tous les articles ont été supprimés !.";
+                
+                }
+                break;
+
+        
+        }            
+                        
     }
 
 

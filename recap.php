@@ -88,7 +88,7 @@
             
         }
         
-        echo "<p>".$allQtt." <-- Voilà la quantité total de produits en sessio"."</p>";
+        echo "<p>".$allQtt." <-- Quantité total de produits en session"."</p>";
         
         echo "<tr>",
                 "<td colspan=4>Total général : </td>",
@@ -104,7 +104,7 @@
 
 ?>
 
-
+<button id="dump-out" type="button"><a class="dumping" href="./traitement.php?action=delete">Dump Out</a></button>
 
 </div>
 
