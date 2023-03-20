@@ -126,7 +126,7 @@ p{
     display: flex;
     justify-content: center;
     font-family: 'Lato', sans-serif;
-    border: solid 1px slateblue;
+    /* border: solid 1px slateblue; */
 }
 
 .my-table{
@@ -149,6 +149,15 @@ p{
     padding: 12px 15px;
 }
 
+th.trashbin-row{
+    padding-left:40px;
+}
+
+td.trashcell{
+    display:flex;
+    justify-content:center;
+}
+
 td.qtt-rows{
     padding-left: 40px;
 }
@@ -167,16 +176,15 @@ td.qtt-rows{
 }
 
 #dump-out{
-    margin-top: 33px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-left: 10px;
     height: 45px;
     width: 112px;
+    cursor: pointer;
 }
 
-.dumping{
-    text-decoration: none;
-}
 
 .trash-icon{
-    width: 50%;
+    width:10%;
 }

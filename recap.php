@@ -53,7 +53,7 @@
                         "<th>Prix</th>",
                         "<th>Quantité</th>",
                         "<th>Total</th>",
-                        "<th></th>",
+                        "<th class='trashbin-row'></th>",
                     "</tr>",
                 "</thead>",
                 "<tbody>";      
@@ -75,7 +75,7 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                    "<td>"."<img class='trash-icon' src='./assets/dumpout.png'>"."</td>",
+                    "<td class='trashcell'>"."<img class='trash-icon' src='./assets/trashbin.png'>"."</td>",
                 "</tr>";    
                         
                         
@@ -106,7 +106,7 @@
 
 ?>
 
-<button id="dump-out" type="button"><a class="dumping" href="./traitement.php?action=delete">Dump Out</a></button>
+<button id="dump-out" type="button" onclick="location.href='./traitement.php?action=delete'">Dump Out</a></button>
 
 </div>
 
