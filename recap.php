@@ -77,7 +77,9 @@
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='trashcell'>"."<img class='trash-icon' src='./assets/trashbin.png'>"."</td>",
                 "</tr>";    
-                        
+            
+                // note a moi même : initier une autre variable qui prend la valeur de $index
+                // et l'injecter à la ligne de l'icone "trashcell" afin que la cible du delete soit le mm index produit comme par exemple : $trashbin => $index
                         
                         
             
