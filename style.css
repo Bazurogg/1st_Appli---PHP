@@ -90,7 +90,7 @@ p{
 
 #prodname,  #prodquantity{
     height: 30px;
-    width: 350px;
+    width: 355px;
     padding-left: 5px;
     border: none;
     background-color: #FAEDCD;
@@ -114,9 +114,45 @@ p{
     box-shadow: 7px 7px 0px 0px #7c845f;
 }
 
-.tableprod{
+.tablecontainer{
     display: flex;
     justify-content: center;
-    border: solid 1px salmon;
     font-family: 'Lato', sans-serif;;
+}
+
+.my-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 730px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.my-table thead tr {
+    background-color: #474d34;
+    color: #ffffff;
+    text-align: left;
+}
+
+.my-table th,
+.my-table td {
+    padding: 12px 15px;
+}
+
+td.qtt-rows{
+    padding-left: 40px;
+}
+
+
+.my-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.my-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.my-table tbody tr:last-of-type {
+    border-bottom: 2px solid #474d34;
 }

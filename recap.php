@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="tableprod">
+<div class="tablecontainer">
     
 <?php
 
@@ -45,7 +45,7 @@
 
         
 
-        echo "<table>",
+        echo "<table class='my-table'>",
                 "<thead>",
                     "<tr>",
                         "<th>#</th>",
@@ -72,7 +72,7 @@
                     "<td>".$index."</td>",
                     "<td>".$product['name']."</td>",
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                    "<td>".$product['qtt']."</td>",
+                    "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
                 "</tr>";    
                         
