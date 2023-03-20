@@ -74,7 +74,7 @@
 
     
         if (isset($_SESSION['alert'])){
-            echo "<p>".$_SESSION['alert']."</p>";
+            echo "<p class='p-alert'>".$_SESSION['alert']."</p>";
             unset($_SESSION['alert']);
         }
 

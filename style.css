@@ -26,6 +26,10 @@ h1{
     align-items: center;
 }
 
+#addform{
+    margin-right: 115px;
+}
+
 nav{
     width: 100%;
     background-color: #E9EDC9;
@@ -74,8 +78,12 @@ p{
     font-family: 'Lato', sans-serif;
 }
 
+.p-alert{
+    font-size: 50px;
+}
+
 #addbutton{
-    margin-left: 190px;
+    margin-left: 240px;
     padding: 10px;
     border-radius: 8px;
     border: none;
@@ -117,7 +125,8 @@ p{
 .tablecontainer{
     display: flex;
     justify-content: center;
-    font-family: 'Lato', sans-serif;;
+    font-family: 'Lato', sans-serif;
+    border: solid 1px slateblue;
 }
 
 .my-table{

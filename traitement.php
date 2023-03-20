@@ -54,10 +54,10 @@
                         $_SESSION['alert'] = "Bravo ! Vous avez bien ajouté un nouveau produit.";
             
                     } 
-                    else $_SESSION['alert'] = "Erreur ! Les données saisiers sont incorrectes.";
+                    else $_SESSION['alert'] = "Erreur ! remplissez entièrement le formulaire.";
             
                 }
-                else $_SESSION['alert'] = "Vous devez soumettre un formulaire.";
+               
 
                 break;
                         
