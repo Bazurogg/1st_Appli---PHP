@@ -65,8 +65,8 @@
 
                 if (isset($_SESSION['products'])){
 
-                    session_unset();
-                    
+                    unset($_SESSION['products']);
+
                     $_SESSION['alert'] = "Tous les articles ont été supprimés !.";
                 
                 }

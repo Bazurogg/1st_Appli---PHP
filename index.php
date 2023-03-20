@@ -64,19 +64,30 @@
 
         $allQtt = 0;
 
-        foreach($_SESSION['products'] as $index => $product){
+        if (!isset($_SESSION['products']) || empty($_SESSION['products'])){
 
-            $allQtt += $product['qtt'];
-
-        }
-
-        echo "<p>".$allQtt." <-- Voilà la quantité total de produits en session"."</p>";
-
-    
-        if (isset($_SESSION['alert'])){
             echo "<p class='p-alert'>".$_SESSION['alert']."</p>";
             unset($_SESSION['alert']);
+    
+        } else {
+
+            foreach($_SESSION['products'] as $index => $product){
+    
+                $allQtt += $product['qtt'];
+    
+            }
+    
+            echo "<p>".$allQtt." <-- Voilà la quantité total de produits en session"."</p>";
+    
+        
+            if (isset($_SESSION['alert'])){
+                
+                echo "<p class='p-alert'>".$_SESSION['alert']."</p>";
+                unset($_SESSION['alert']);
+            }
+            
         }
+
 
         ?>
 

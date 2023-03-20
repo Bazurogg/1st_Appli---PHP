@@ -53,6 +53,7 @@
                         "<th>Prix</th>",
                         "<th>Quantité</th>",
                         "<th>Total</th>",
+                        "<th></th>",
                     "</tr>",
                 "</thead>",
                 "<tbody>";      
@@ -74,6 +75,7 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
+                    "<td>"."<img class='trash-icon' src='./assets/dumpout.png'>"."</td>",
                 "</tr>";    
                         
                         
