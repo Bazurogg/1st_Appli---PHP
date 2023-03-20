@@ -32,9 +32,9 @@
 
         </div>
 
-        <form id=addform action="traitement.php" method="post">
+        <form id=addform action="traitement.php?action=add" method="post">
             <!-- "action" indique la cible du formulaire lorsque le utilisateur soumet le formulaire -->
-            <!-- "method" indique par quelle méthode les donées du formulaire seront transmise au serveur  -->
+            <!-- "method" indique par quelle méthode les données du formulaire seront transmise au serveur  -->
             <p>
                 <label>
                     Nom du produit :
@@ -72,8 +72,7 @@
 
         echo "<p>".$allQtt." <-- Voilà la quantité total de produits en session"."</p>";
 
-        
-
+    
         if (isset($_SESSION['alert'])){
             echo "<p>".$_SESSION['alert']."</p>";
             unset($_SESSION['alert']);
