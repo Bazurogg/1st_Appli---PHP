@@ -82,6 +82,7 @@
                     header("location:recap.php");
                     
                     $_SESSION['alert'] = "Le produit a été supprimé.";
+                    
                     die();
 
                 }
@@ -96,6 +97,7 @@
                     
                     
                     header("location:recap.php");
+
                     die();
 
                 }
