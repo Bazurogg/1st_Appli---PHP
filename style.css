@@ -153,7 +153,7 @@ th.trashbin-row{
     padding-left:40px;
 }
 
-td.trashcell{
+td.manip{
     display:flex;
     justify-content:center;
 }
@@ -188,18 +188,18 @@ td.qtt-rows{
     width:50%;
 }
 
-#trashbtn{
+#dumpbtn{
     display: inline-block;
 }
 
-.addonclick{
+#addonclick{
     
     padding: 0 20px;
     font-size: 25px;
     color: green;
 }
 
-.removeonclick{
+#removeonclick{
     
     padding: 0 25px;
     font-size: 25px;

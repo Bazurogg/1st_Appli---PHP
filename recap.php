@@ -76,28 +76,30 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                    "<td class='trashcell'>"."<button class='addonclick'>"."+"."</button>"."<button id='trashbtn' type='button' onclick='location.href='traitement.php?action=deleteItem&id=$index'>"."<img class='trash-icon' src='./assets/trashbin02.png'>"."</button>"."<button class='removeonclick'>"."-"."</button>"."</td>",
+                    "<td class='manip'>"."<button id='addonclick'>"."<a href='traitement.php?action=addItem&id=$index' style='text-decoration:none;'>+</button>"."<button id='dumpbtn'>"."<a href='traitement.php?action=deleteItem&id=$index' style='text-decoration:none;'>supprimer</a>"."</button>"."<button id='removeonclick'>-</button>"."</td>",
                 "</tr>";    
-            
-                // note a moi même : initier une autre variable qui prend la valeur de $index
-                // et l'injecter à la ligne de l'icone "trashcell" afin que la cible du delete soit le mm index produit comme par exemple : $trashbin => $index
                         
                         
             
             $totalGeneral += $product['total'];
             
             $allQtt += $product['qtt'];
-
         
-            
-            
+                        
         }
         
         echo "<p>".$allQtt." <-- Quantité total de produits en session"."</p>";
+
+        if (isset($_SESSION['alert'])){
+
+            echo "<p class='p-alert'>".$_SESSION['alert']."</p>";
+            unset($_SESSION['alert']);    
+        }
         
         echo "<tr>",
-                "<td colspan=4>Total général : </td>",
+                "<td colspan=4><strong>Total général : </strong></td>",
                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                "<td>"."</td>",
             "</tr>",
         "</tbody>",
         "</table>";
@@ -109,7 +111,7 @@
 
 ?>
 
-<button id="dump-out" type="button" onclick="location.href='./traitement.php?action=delete'">Dump Out</a></button>
+<a href='traitement.php?action=delete'"><button id="dump-out">Dump Out</button></a>
 
 </div>
 

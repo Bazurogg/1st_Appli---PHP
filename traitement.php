@@ -74,16 +74,35 @@
 
             case "deleteItem":
                 
-                if (isset($_GET['id'])){
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
 
-                    $name = $_GET['id'];
+                    unset($_SESSION['products'][$_GET['id']]);
+                    $_SESSION['products'] = array_values($_SESSION['products']);
                     
-                    unset($_SESSION['products']['name']);
-
+                    header("location:recap.php");
+                    
                     $_SESSION['alert'] = "Le produit a été supprimé.";
+                    die();
+
                 }
                 break;
-        
+
+            case "addItem":
+
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
+
+
+                    $_SESSION['product']['qtt'] += 1;
+                    
+                    
+                    header("location:recap.php");
+                    die();
+
+                }
+                break;
+
+
+
         }            
                         
     }
