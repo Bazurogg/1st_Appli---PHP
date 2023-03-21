@@ -93,7 +93,7 @@
                 if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
 
 
-                    $_SESSION['product']['qtt'] += 1;
+                    $_SESSION['products']['qtt'] += 1;
                     
                     
                     header("location:recap.php");
