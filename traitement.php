@@ -40,7 +40,7 @@
                             "name" => $name,
                             "price" => $price,
                             "qtt" => $qtt,
-                            "total" => $price*$qtt
+                            "total" => $price*$qtt,
                         ];
             
                         $_SESSION['products'][] = $product; // on sollicite le tableau de session $_SESSION fourni par PHP
@@ -72,6 +72,17 @@
                 }
                 break;
 
+            case "deleteItem":
+                
+                if (isset($_GET['id'])){
+
+                    $name = $_GET['id'];
+                    
+                    unset($_SESSION['products']['name']);
+
+                    $_SESSION['alert'] = "Le produit a été supprimé.";
+                }
+                break;
         
         }            
                         

@@ -63,7 +63,8 @@
 
         foreach($_SESSION['products'] as $index => $product){
 
-        
+
+
 
             // $index valeur de l'index du tableau $_SESSION['products'] chaque produit sera numéroter par cette valeur dans le tableau HTML
 
@@ -75,7 +76,7 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                    "<td class='trashcell'>"."<img class='trash-icon' src='./assets/trashbin.png'>"."</td>",
+                    "<td class='trashcell'>"."<button class='addonclick'>"."+"."</button>"."<button id='trashbtn' type='button' onclick='location.href='traitement.php?action=deleteItem&id=$index'>"."<img class='trash-icon' src='./assets/trashbin02.png'>"."</button>"."<button class='removeonclick'>"."-"."</button>"."</td>",
                 "</tr>";    
             
                 // note a moi même : initier une autre variable qui prend la valeur de $index

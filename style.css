@@ -184,7 +184,25 @@ td.qtt-rows{
     cursor: pointer;
 }
 
-
 .trash-icon{
-    width:10%;
+    width:50%;
+}
+
+#trashbtn{
+    display: inline-block;
+}
+
+.addonclick{
+    
+    padding: 0 20px;
+    font-size: 25px;
+    color: green;
+}
+
+.removeonclick{
+    
+    padding: 0 25px;
+    font-size: 25px;
+    color: red;
+
 }
