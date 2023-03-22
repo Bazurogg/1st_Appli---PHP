@@ -96,7 +96,7 @@
                     
                     $_SESSION['products'][$index]['qtt']++;  // on incrémente la valeur de "qtt" de l'index correspondant.
 
-                    $_SESSION['products'][$index]['total'] += 'price';
+                    $_SESSION['products'][$index]['total'] = $_SESSION['products'][$index]['price']*$_SESSION['products'][$index]['qtt'];
     
                     header("location:recap.php");
 
@@ -111,9 +111,11 @@
 
                     $index = $_GET['id'];
 
-                    if ($_SESSION['products'][$index]['qtt'] !== 1){
+                    if ($_SESSION['products'][$index]['qtt'] !== 1){ // On veux que lorsque la quantité tombe à zéro on supprime le produit cible.
 
-                        $_SESSION['products'][$index]['qtt']--;
+                        $_SESSION['products'][$index]['qtt']--; // On décrémente la "qtt" de l'index correspondant.
+
+                        $_SESSION['products'][$index]['total'] = $_SESSION['products'][$index]['price']*$_SESSION['products'][$index]['qtt'];
         
                         header("location:recap.php");
     
