@@ -122,10 +122,12 @@
                     } else {
 
                         unset($_SESSION['products'][$index]);
-
+                        
+                        $_SESSION['alert'] = "Le produit a été supprimé.";
+                        
                         header("location:recap.php");
 
-                        $_SESSION['alert'] = "Le produit a été supprimé.";
+                        die();
                     }
                     
 
