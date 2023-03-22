@@ -83,7 +83,7 @@
                     
                     $_SESSION['alert'] = "Le produit a été supprimé.";
                     
-                    die();
+                    die(); //On stop l'exécution du script similaire à "exit()"
 
                 }
                 break;
