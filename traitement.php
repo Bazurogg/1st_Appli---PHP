@@ -110,12 +110,24 @@
                 if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
 
                     $index = $_GET['id'];
-                    
-                    $_SESSION['products'][$index]['qtt']--;
-    
-                    header("location:recap.php");
 
-                    die();
+                    if ($_SESSION['products'][$index]['qtt'] !== 1){
+
+                        $_SESSION['products'][$index]['qtt']--;
+        
+                        header("location:recap.php");
+    
+                        die();
+
+                    } else {
+
+                        unset($_SESSION['products'][$index]);
+
+                        header("location:recap.php");
+
+                        $_SESSION['alert'] = "Le produit a été supprimé.";
+                    }
+                    
 
                 }
                 break;
