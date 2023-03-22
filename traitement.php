@@ -74,7 +74,7 @@
 
             case "deleteItem":
                 
-                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){ // Vérification si "action est bien appelé vai l'url.
 
                     unset($_SESSION['products'][$_GET['id']]);
                     $_SESSION['products'] = array_values($_SESSION['products']);
@@ -88,14 +88,31 @@
                 }
                 break;
 
-            case "addItem":
+            case "increaseItem":
 
                 if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
 
+                    $index = $_GET['id']; // Affectation de l'index la valeur "id" récupérer par la méthode $_GET.
+                    
+                    $_SESSION['products'][$index]['qtt']++;  // on incrémente la valeur de "qtt" de l'index correspondant.
 
-                    $_SESSION['products']['qtt'] += 1;
+                    $_SESSION['products'][$index]['total'] += 'price';
+    
+                    header("location:recap.php");
+
+                    die();
+
+                }
+                break;
+                
+            case "decreaseItem":
+                
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
+
+                    $index = $_GET['id'];
                     
-                    
+                    $_SESSION['products'][$index]['qtt']--;
+    
                     header("location:recap.php");
 
                     die();
@@ -104,6 +121,9 @@
                 break;
 
 
+            case "":
+                
+                break;
 
         }            
                         

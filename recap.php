@@ -76,7 +76,7 @@
                     "<td>".number_format($product['price'], 2,",", "&nbsp;")."&nbsp;€</td>",
                     "<td class='qtt-rows'>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2,",", "&nbsp;")."&nbsp;€</td>",
-                    "<td class='manip'>"."<button id='addonclick'>"."<a href='traitement.php?action=addItem&id=$index' style='text-decoration:none;'>+</button>"."<button id='dumpbtn'>"."<a href='traitement.php?action=deleteItem&id=$index' style='text-decoration:none;'>supprimer</a>"."</button>"."<button id='removeonclick'>-</button>"."</td>",
+                    "<td class='manip'>"."<a href='traitement.php?action=increaseItem&id=$index' style='text-decoration:none;'>"."<button id='addonclick'>+</button>"."</a>"."<button id='dumpbtn'>"."<a href='traitement.php?action=deleteItem&id=$index' style='text-decoration:none;'>supprimer</a>"."</button>"."<button id='removeonclick'>-</button>"."</td>",
                 "</tr>";    
                         
                         
