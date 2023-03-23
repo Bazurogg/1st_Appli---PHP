@@ -160,11 +160,33 @@
 
 <!--
      
-superglobales : Des variables prédéfinies en PHP disponibles quelque soit le contexte du script. Il n'est pas nécessaire de faire "global $variable" avant d'y accéder dans les méthodes et fonctions.
+superglobales : Des variables prédéfinies en PHP disponibles quelque soit le contexte (global ou local) du script. Il n'est pas nécessaire de faire "global $variable" avant d'y accéder dans les méthodes et fonctions. Variables natives à PHP.
     
-session : tableau associatif des valeurs stockées transmises de page en page pendant la durée de visite de l'utilisateur sur le site. Il faut au préalable activer les sessions en appelant la fonction : "session_start()"
-    
-requete HTTP : via le protocole HTML qui contrôle la façon dont l'utilisateur formule ses demandes et la façon dont le serveur y répond. Ce protocole connaît différentes méthodes de requêtes :
+session : 
+
+Tableau associatif des valeurs stockées (données de session) transmises de page en page par le serveur et non par le client(Cela assure ainsi la sécurité et l'intégrité des données et leurs disponibilité.). Il faut au préalable activer les sessions en appelant la fonction : "session_start()".
+
+Les données de session sont sauvegardées côté serveur. La session conserve ces informations pendant quelques minutes contrairement à une base de données ou un système de fichiers. Cette durée dépend de la configuration du serveur.
+
+Les données individuelles de chaque utilisateurs sont stockées en utilisant un identifiant de session unique. Cet identifiant peut-être transmis soit en GET (PHPSESSID ajouté à la fin de l'URL), en POST ou en Cookie selon la configuration du serveur là aussi.
+
+Ces identifiants sont envoyés vers le navigateur via des cookies de session et on récupère les données existantes de la session grâce à l'identifiant.
+
+Une session peut contenir tout type de données :
+
+_nombre
+_chaînes de caractères
+_tableau
+
+Quelques cas d'utilisation :
+_espaces membres et accés sécurisé avec authentification
+_gestion de caddie sur site d'e-commerce
+_formulaires éclatés sur plusieurs pages
+_stockage d'info relatives à la navigation de l'utilisateur (thème, langue, etc.).
+
+
+
+requête HTTP : via le protocole HTML qui contrôle la façon dont l'utilisateur formule ses demandes et la façon dont le serveur y répond. Ce protocole connaît différentes méthodes de requêtes :
 
 _ GET : query string
 _ POST
