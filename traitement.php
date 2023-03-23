@@ -111,7 +111,7 @@
 
                     $index = $_GET['id'];
 
-                    if ($_SESSION['products'][$index]['qtt'] !== 1){ // On veux que lorsque la quantité tombe à zéro on supprime le produit cible.
+                    if ($_SESSION['products'][$index]['qtt'] > 1){ // On veux que lorsque la quantité tombe à zéro on supprime le produit cible.
 
                         $_SESSION['products'][$index]['qtt']--; // On décrémente la "qtt" de l'index correspondant.
 
