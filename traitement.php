@@ -53,7 +53,8 @@
             
                         $_SESSION['alert'] = "Bravo ! Vous avez bien ajouté un nouveau produit.";
             
-                    } 
+                    }
+                    
                     else $_SESSION['alert'] = "Erreur ! remplissez entièrement le formulaire.";
             
                 }

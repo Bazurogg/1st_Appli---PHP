@@ -111,7 +111,7 @@
 
 ?>
 
-<a href='traitement.php?action=delete'"><button id="dump-out">Dump Out</button></a>
+<a href='traitement.php?action=delete'><button id="dump-out">Dump Out</button></a>
 
 </div>
 
